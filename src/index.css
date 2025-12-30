@@ -162,12 +162,16 @@
   
   /* Portfolio Grid */
   .portfolio-card {
-    @apply relative overflow-hidden rounded-lg group;
+    @apply relative overflow-hidden rounded-lg;
     box-shadow: var(--shadow-md);
   }
   
   .portfolio-overlay {
-    @apply absolute inset-0 bg-primary/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+    @apply absolute inset-0 bg-primary/80 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300;
+  }
+  
+  .portfolio-card:hover .portfolio-overlay {
+    @apply opacity-100;
   }
   
   /* Section Styling */
